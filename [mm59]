@@ -1,0 +1,37 @@
+#include<stdio.h>    
+#include<stdlib.h>    
+    
+int main()    
+{       
+    int max=0,out=0;    
+    int ans[9999];    
+    int input[9999];    
+    int i,num;    
+        
+    num=0;    
+    while(scanf("%d",&input[num])!=EOF)    
+    {    
+        num++;    
+    }    
+    for(i=0;i<num;i++)    
+    {    
+            ans[input[i]]++;    
+    }    
+    for(i=0;i<num;i++)    
+    {    
+        if(max<ans[i])    
+        {    
+            max=ans[i];    
+            out=i;    
+        }    
+    }    
+    if(max>num/2)    
+    {    
+        printf("Majority is %d\n",out);    
+    }    
+    else    
+    {    
+        printf("No Majority\n");    
+    }    
+    return 0;    
+}  
